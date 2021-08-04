@@ -1,19 +1,10 @@
 ﻿using System;
 
-public class Bolillero	
+public class Bolilla
 {
 	public Bolilla()
 	{
-		private byte Numero;
-
-		public SacarBolilla()
-    {
-
-    }
-
-	public IngresarBolilla()
-    {
-
-    }
+		private byte[] bolilla;
 	}
+	
 }
