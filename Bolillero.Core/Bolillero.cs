@@ -58,11 +58,11 @@ namespace Bolillero.Core
         Afuera.Clear();
     }
     
-    public Jugada(byte[] jugadas)
+    public void Jugada(byte[] jugadas)
 	{
 		private byte[] jugada;
 
-        if (Add(bolilla) == jugada)
+        for (Add(bolilla) == jugada)
         {
             $"win"
         }
