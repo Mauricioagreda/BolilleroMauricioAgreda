@@ -20,12 +20,14 @@ namespace Bolillero.Core
 
     List<byte> Afuera {get; set;}
     List<byte> Adentro {get; set;}
+    List<byte> Jugada {get; set;}
     Random r;
 
     public Bolillero()
     {
         Afuera = new List<byte>{};
-        Afuera = new List<byte>{};
+        Adentro = new List<byte>{};
+        Jugada = new List<byte>{};
         r = new Random();
     }
 
@@ -60,17 +62,18 @@ namespace Bolillero.Core
     
     public void Jugada(byte[] jugadas)
 	{
-		private byte[] jugada;
+        byte indiceAzar =(byte)r.Next(0, Adentro.Count);
+        byte bolilla = Adentro[indiceAzar];
+        Adentro.RemoveAt(indiceAzar);
+        Jugada.Add(bolilla);
 
-        for (Add(bolilla) == jugada)
-        {
-            $"win"
-        }
+        jugadas ++;
+
+        return Jugada;
 	}
 
-   
-
 	public IngresarBolilla()
+    {
 
     }
 }
