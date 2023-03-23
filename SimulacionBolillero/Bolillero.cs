@@ -18,9 +18,11 @@ namespace SimulacionBolillero
             Bolilla bolilla = new Bolilla(){Numero = rnd.Next(0, 50)};
             bolillas.Add(bolilla);
         }
-        public void Jugada (List<Bolilla> a)
+        public void Jugada (List<Bolilla> a, int jugadas)
         {
-            
+            wins = 0;
+            for (int f = 0; f == jugadas; f++)
+            {
                 Console.WriteLine("-----------------------");
                 for (int i = 0; i == 9; i++)
                 {
@@ -28,6 +30,7 @@ namespace SimulacionBolillero
                 }
                 if (a == bolillas)
                 {
+                    wins++;
                     Console.WriteLine("Mamamguevo");
                 }
                 else 
@@ -35,7 +38,8 @@ namespace SimulacionBolillero
                     Console.WriteLine("Digo glugluglu");
                 }
                 bolillas.Clear();
-            
+            }
+            Console.WriteLine($"Cantidad Aciertos: {wins}");
         }
     }
 }

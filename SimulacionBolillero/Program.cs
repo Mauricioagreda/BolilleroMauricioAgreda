@@ -22,9 +22,8 @@ namespace SimulacionBolillero
                 new Bolilla(10)
             };
 
-            Bolillero.Jugada(x);
+            Bolillero.Jugada(x, 5);
             Print(x);
-
             Console.ReadKey();
         }
 
